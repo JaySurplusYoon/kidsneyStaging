@@ -1,0 +1,66 @@
+@import '../../Styles/variables.scss';
+@import './MenuTab/MenuTab.scss';
+
+@mixin navBox {
+  height: 70px;
+}
+
+.nav {
+  background-color: $color-white;
+
+  .headerNav {
+    position: relative;
+    @include flexCenter;
+    @include navBox;
+    background-color: $color-white;
+    cursor: pointer;
+
+    .logo {
+      width: 200px;
+      height: 60px;
+      color: $color-logo;
+    }
+
+    .navLinks {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      width: 370px;
+      height: 60px;
+      margin-right: 20px;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+
+      .navBtn {
+        @include flexCenter;
+        height: 30px;
+        margin-top: 15px;
+        background-color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+
+        .fas {
+          padding-right: 5px;
+          color: $color-blue;
+        }
+      }
+
+      .navBtn:hover {
+        color: $color-blue;
+      }
+    }
+  }
+
+  .navBar {
+    @include flexCenter;
+    @include navBox;
+    position: relative;
+
+    .navBarUl {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+  }
+}
